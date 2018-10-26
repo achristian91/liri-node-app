@@ -40,36 +40,20 @@ var getMeSpotify = function (songName) {
 /// Band request
 
 var getConcert = function (artist) {
-    request('https://rest.bandsintown.com/artists/' + artist + '/events?app_id=codingbootcamp', function (error, response, body) {
-        if (err && response.statusCode != 200) {
-            console.log('error:', err);
-            console.log('statusCode:', response && response.statusCode);
-        }
 
-        var bP = JSON.parse(data);
-        for (i = 0; i < bP.length; i++) {
-            var venue = bP[i].venue.name
-            var region = bP[i].venue.region
-            var country = bP[i].venue.country
-            var city = bP[i].venue.city
+    var queryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=" + keys.bandsInTown;
 
-            console.log("Venue: " + venue)
-            
-            if (region === "") {
-                console.log("Location: " + city + ", " + country)
-                
-            }
-            else {
-                console.log("Location: " + city + ", " + region)
-                
-            }
-            console.log("Date: " + moment(bP[i].datetime).format('L'));
-            
-            console.log("***********************************************************")
-        };
+    request(queryUrl, function (error, response, body) {
+       
+        var result = JSON.parse(body);
+        
+        var showData = [
+            'Venue name: ' + result.venue.name,
+            'Venue location: ' + result.venue.city,
+            'Date of Event: ' + moment(result.datetime, 'YYYY-MM-DD').format('MM/DD/YYYY')
+        ].join("\n\n")
     });
 };
-
 
 /// Movie request 
 
