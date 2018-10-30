@@ -8,19 +8,19 @@ Below are commands that are applicable with the application
 
 ### spotify-this-song
 
-![alt text] (https://github.com/achristian91/liri-node-app/blob/master/imgs/spotify-this-song.png)
+![spotify-this-song] (https://github.com/achristian91/liri-node-app/blob/master/imgs/spotify-this-song.png)
 
 ### concert-this
 
-![alt text] (https://github.com/achristian91/liri-node-app/blob/master/imgs/concert-this.png)
+![concert-this] (https://github.com/achristian91/liri-node-app/blob/master/imgs/concert-this.png)
 
 ### movie-this
 
-![alt text] (https://github.com/achristian91/liri-node-app/blob/master/imgs/movie-this.png)
+![movie-this] (https://github.com/achristian91/liri-node-app/blob/master/imgs/movie-this.png)
 
 ### do-what-it-says
 
-![alt text] (https://github.com/achristian91/liri-node-app/blob/master/imgs/do-what-it-says.png)
+![do-what-it-says] (https://github.com/achristian91/liri-node-app/blob/master/imgs/do-what-it-says.png)
 
 ## Built With 
 
