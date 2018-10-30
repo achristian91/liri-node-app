@@ -56,7 +56,6 @@ var getConcert = function (bandName) {
             var country = concertBands[i].venue.country
             var city = concertBands[i].venue.city
 
-            //display concert information
             console.log('Venue: ' + venue);
             console.log('Location: ' + city + ', ' + country);
             console.log('Date: ' + moment(concertBands[i].datetime).format('L'));
