@@ -39,21 +39,33 @@ var getMeSpotify = function (songName) {
 
 /// Band request
 
-var getConcert = function (artist) {
+var getConcert = function (bandName) {
 
-    var queryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=" + keys.bandsInTown;
+    var queryURL = 'https://rest.bandsintown.com/artists/' + bandName + '/events?app_id=bandsInTown';
 
-    request(queryUrl, function (error, response, body) {
-       
-        var result = JSON.parse(body);
-        
-        var showData = [
-            'Venue name: ' + result.venue.name,
-            'Venue location: ' + result.venue.city,
-            'Date of Event: ' + moment(result.datetime, 'YYYY-MM-DD').format('MM/DD/YYYY')
-        ].join("\n\n")
-    });
-};
+
+    request(queryURL, function (err, response, data) {
+        if (!err && response.statusCode == 200) {
+            console.log('Upcoming concerts Include:');
+        }
+
+        var concertBands = JSON.parse(data);
+
+        for (i = 0; i < concertBands.length; i++) {
+            var venue = concertBands[i].venue.name
+            var country = concertBands[i].venue.country
+            var city = concertBands[i].venue.city
+
+            //display concert information
+            console.log('Venue: ' + venue);
+            console.log('Location: ' + city + ', ' + country);
+            console.log('Date: ' + moment(concertBands[i].datetime).format('L'));
+            console.log('------------------------------')
+        }
+
+    })
+}
+
 
 /// Movie request 
 
@@ -102,7 +114,7 @@ var pick = function (caseData, functionData) {
             getMeSpotify(functionData);
             break;
         case 'concert-this':
-            getConcert();
+            getConcert(functionData);
             break;
         case 'movie-this':
             getMeMovie(functionData);
