@@ -12,15 +12,15 @@ Below are commands that are applicable with the application
 
 ### concert-this
 
-![concert-this] (https://github.com/achristian91/liri-node-app/blob/master/imgs/concert-this.png)
+![concert-this](https://github.com/achristian91/liri-node-app/blob/master/imgs/concert-this.png)
 
 ### movie-this
 
-![movie-this] (https://github.com/achristian91/liri-node-app/blob/master/imgs/movie-this.png)
+![movie-this](https://github.com/achristian91/liri-node-app/blob/master/imgs/movie-this.png)
 
 ### do-what-it-says
 
-![do-what-it-says] (https://github.com/achristian91/liri-node-app/blob/master/imgs/do-what-it-says.png)
+![do-what-it-says](https://github.com/achristian91/liri-node-app/blob/master/imgs/do-what-it-says.png)
 
 ## Built With 
 
