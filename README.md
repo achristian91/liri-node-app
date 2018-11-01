@@ -8,7 +8,7 @@ Below are commands that are applicable with the application
 
 ### spotify-this-song
 
-![spotify-this-song] (https://github.com/achristian91/liri-node-app/blob/master/imgs/spotify-this-song.png)
+![spotify-this-song](https://github.com/achristian91/liri-node-app/blob/master/imgs/spotify-this-song.png)
 
 ### concert-this
 
